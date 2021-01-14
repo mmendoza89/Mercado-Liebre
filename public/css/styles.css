@@ -162,6 +162,11 @@ footer article{
     margin: 20px 0px;
 }
 
+.articles-footer{
+    display: block;
+    text-align: center;
+}
+
 footer i{
     color: #1259c3;
 }
@@ -308,10 +313,11 @@ div.interests div input{
     /* FOOTER */
     .articles-footer{
         display: flex;
+        justify-content: space-between;
     }
 
     .articles-footer article{
-        text-align: center;
+        margin-left: 10px;
     }
 
     .articles-footer article i{
