@@ -173,51 +173,71 @@ footer i{
 
 /* ----- FORMULARIOS ------ */
 
+div.inner-content-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.login div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .login input,
 .register input{
     width: 100%;
     padding: 10px;
     margin: 15px 0px;
-    border-radius: 5px;
     border: 0px;
 }
-
-#error {
-    display: block;
-    color: red;
-    margin: 5px 0 0 0;
-  }
 
 .login input[type='submit'],
 .register input[type='submit']{
     color: #FFF;
-    background-color: #0044AA;  
+    background-color: #0044AA;
     border-radius: 5px;
 }
 
 .register input[type='reset']{
     color: #FFF;
     background-color: #AA0044;
+    border-radius: 5px;
 }
 
-#title-form{
+div.perfil-u,
+div.intereses, 
+div.fecha-n,
+div.foto-p{
+    margin-top: 15px;
+    width: 100%;
+}
+
+div.perfil-u label,
+div.intereses label, 
+div.fecha-n label,
+div.foto-p label{
     font-weight: 600;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 div.profile{
     display: flex;
-    align-items: flex-start;
+    justify-content: space-between;
+    width: 70%;
 }
 
 div.profile div{
     display: flex;
-    align-items: center;
-    width: 40vw;    
+    align-items: center;  
 }
 
 div.profile label{
+    font-weight: 400;
     margin-left: 10px;
+    margin-top: 0px;
 }
 
 div.profile input,
@@ -228,21 +248,6 @@ div.profile label{
 div.interests{
     display: flex;
     flex-wrap: wrap;
-}
-
-div.perfil-u,
-div.intereses, 
-div.fecha-n,
-div.foto-p{
-    margin-top: 15px;
-}
-
-div.perfil-u label,
-div.intereses label, 
-div.fecha-n label,
-div.foto-p label{
-    font-weight: 600;
-    margin-top: 20px;
 }
 
 div.interests div{
@@ -261,6 +266,23 @@ div.interests div input{
     margin: 20px;
 }
 
+div.password-section{
+    width: 60%;
+}
+
+div.password-section input[id="r-contraseña"]{
+    margin-bottom: 5px;
+}
+
+div.password-section input[id="r-confirmar-c"]{
+    margin-top: 5px;
+}
+
+.buttons-form {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
 
 /* ----- MEDIA QUERIES ----- */
 
@@ -268,9 +290,34 @@ div.interests div input{
 @media(min-width:768px){
 
     /* FORMULARIOS */
+    .register-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.login-input input{
+        width: 70%;
+    }
+
+    div.inner-content-form{
+        width: 60vw;
+    }
+
     div.profile div{
         width: 20vw;    
-        
+    }
+
+    .buttons-form {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .login input[type='submit'], .register input[type='reset'],
+    .register input[type='submit']{
+        width: 25vw;
     }
 }
 
@@ -302,6 +349,19 @@ div.interests div input{
         transform: rotate(360deg);
     }
     /* FORMULARIOS */
+    .login div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login input[id="r-usuario"],
+    .login input[id="r-contraseña"]{
+        width: 60%;
+
+    }
+
     .login input[type='submit']:hover,
     .register input[type='submit']:hover{
         background-color: #0022AA;
@@ -310,6 +370,13 @@ div.interests div input{
     .register input[type='reset']:hover{
         background-color: #CC1155;
     }
+
+    .register input[type='reset'],
+    .register input[type='submit']{
+        width: 20vw;
+
+    }
+
     /* FOOTER */
     .articles-footer{
         display: flex;
