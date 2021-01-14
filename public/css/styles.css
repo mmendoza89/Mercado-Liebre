@@ -1,0 +1,324 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+/* ----- HEADER ----- */
+.main-header{
+    width: 100%;
+}
+
+div.top-header{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.burger-menu{
+    text-align: center;
+}
+
+div.burger-menu i{
+    margin: 20px 0px;
+    width: 40px;
+    height: 40px;
+    background-color: #0044AA;
+    color: #FFF;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+div.burger-menu i:hover{
+    cursor: pointer;
+    background-color: #0022AA;
+}
+
+p{
+    font-size: 12px;
+}
+
+h3{
+    font-size: 24px;
+}
+
+header{
+    background-color: #EAC926;
+}
+
+header img,
+header form{
+    width: 50%;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* ----- MAIN ----- */
+
+div.last-visit,
+div.offers{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 20px;
+}
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.discount{
+    width: 70%;
+}
+
+.description{
+    margin-top: 20px;
+}
+
+h3,
+.description{
+    color: #666;
+}
+
+section.banner img{
+    width: 100%;
+    display: block;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+main section article{
+    background-color: #fff;
+    margin: 10px 0px;
+}
+
+main section article img{
+    display: block;
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+/* ----- FOOTER ----- */
+
+footer{
+    background-color: #fff;
+    color: #666;
+    padding: 20px 5%;
+}
+
+footer article{
+    margin: 20px 0px;
+}
+
+footer i{
+    color: #1259c3;
+}
+
+/* ----- FORMULARIOS ------ */
+
+.login input,
+.register input{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0px;
+    border-radius: 5px;
+    border: 0px;
+}
+
+#error {
+    display: block;
+    color: red;
+    margin: 5px 0 0 0;
+  }
+
+.login input[type='submit'],
+.register input[type='submit']{
+    color: #FFF;
+    background-color: #0044AA;  
+    border-radius: 5px;
+}
+
+.register input[type='reset']{
+    color: #FFF;
+    background-color: #AA0044;
+}
+
+#title-form{
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+div.profile{
+    display: flex;
+    align-items: flex-start;
+}
+
+div.profile div{
+    display: flex;
+    align-items: center;
+    width: 40vw;    
+}
+
+div.profile label{
+    margin-left: 10px;
+}
+
+div.profile input,
+div.profile label{
+    width: auto;
+}
+
+div.interests{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.perfil-u,
+div.intereses, 
+div.fecha-n,
+div.foto-p{
+    margin-top: 15px;
+}
+
+div.perfil-u label,
+div.intereses label, 
+div.fecha-n label,
+div.foto-p label{
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+div.interests div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+div.interests div input,
+div.interests div label{
+    width: auto;
+}
+
+div.interests div input{
+    margin: 20px;
+}
+
+
+/* ----- MEDIA QUERIES ----- */
+
+/* VERSION TABLET */
+@media(min-width:768px){
+
+    /* FORMULARIOS */
+    div.profile div{
+        width: 20vw;    
+        
+    }
+}
+
+/* VERSION DESKTOP */
+@media(min-width:1024px){
+    /* MAIN */
+    article.article-container{
+        transition: all 450ms;
+    }
+
+    article.article-container:hover{
+        box-shadow: 5px 5px 5px 0px rgba(110,110,110,1);
+    }
+
+    .description{
+        opacity: 0;
+        transition: all 450ms;
+    }
+    
+    .fa-truck{
+        transition: all 450ms;
+    }
+
+    .article-container:hover .description{
+        opacity: 1;
+    }
+    
+    .article-container:hover .fa-truck{
+        transform: rotate(360deg);
+    }
+    /* FORMULARIOS */
+    .login input[type='submit']:hover,
+    .register input[type='submit']:hover{
+        background-color: #0022AA;
+    }
+
+    .register input[type='reset']:hover{
+        background-color: #CC1155;
+    }
+    /* FOOTER */
+    .articles-footer{
+        display: flex;
+    }
+
+    .articles-footer article{
+        text-align: center;
+    }
+
+    .articles-footer article i{
+        transition: all 450ms;
+   }
+
+    .articles-footer article:hover i{
+         color: #EAC926;
+    }
+}
